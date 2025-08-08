@@ -1,0 +1,83 @@
+.header{
+    background: #000;
+}
+
+.header__inner {
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header__logo{
+    color: #fff;
+    text-decoration: none;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.todo__alert{
+    padding: 15px 20px;
+    background:#D0E7DE;
+}
+
+.todo__alert--success{
+    color: #065134;
+    font-size: 24px;
+}
+
+/* 全体フォームを中央寄せ＋幅制限 */
+.form-container {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 40px 20px;
+}
+
+/* 入力欄とボタンを横並び・中央揃え・間隔調整 */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    /* ← 入力とボタンの間隔を自然に */
+}
+
+/* 入力欄のラッパー（余白不要なら特に設定不要） */
+.todo__wrapper {
+    margin: 0;
+    width: auto;
+}
+
+/* 入力欄そのもの */
+.todo__box {
+    padding: 30px;
+    width: 1000px;
+    height: 91.5333px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ボタン側のラッパー（余白調整） */
+.todo__sakusei {
+    margin: 0;
+}
+
+/* 作成ボタンの見た目 */
+.todo__sakuseibox {
+    width: 300px;
+    height: 91.5333px;
+    font-size: 24px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* ボタンホバー時の演出（任意） */
+.todo__sakuseibox:hover {
+    background-color: #444;
+}
