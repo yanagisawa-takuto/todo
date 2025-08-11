@@ -1,3 +1,4 @@
+@extends('layouts.app')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
@@ -8,19 +9,59 @@
         Todoを作成しました
     </div>
 </div>
-<form action="/" method="post">
-    <div class="form-container">
-        <form action="/" method="post">
-            <div class="flex">
-                <div class="todo__wrapper">
-                    <input class="todo__box" type="text" name="todo" id="todo" />
-                </div>
-                <div class="todo__sakusei">
-                    <button class="todo__sakuseibox" type="submit">作成</button>
-                </div>
-            </div>
-        </form>
+<div class="todo__content">
+    <form class="create-form" action="/todos" method="post">
+    @csrf
+    <div class="create-form__item">
+        <input class="create-form__item-input" type="text" name="content"/>
     </div>
-</form>
+    <div class="create-form__button">
+        <button class="create-form__button-submit" type="submit">作成</button>
+    </div>
+    </form>
+    <div class="todo-table">
+        <table class="todo-table__inner">
+            <tr class="todo-table__row">
+                <th class="todo-table__header">ToDo</th>
+            </tr>
+            <tr class="todo-table__row">
+                <td class="todo-table__item">
+                    <form class="update-form">
+                        <div class="update-form__item">
+                            <input class="update-form__item-input" type="text" name="content" value="test">
+                        </div>
+                        <div class="update-form__button">
+                            <button class="update-form__button-submit" type="submit">更新</button>
+                        </div>
+                    </form>
+                </td>
+                <td class="todo-table__row">
+                    <form class="delete-form">
+                        <div class="delete-form__button">
+                            <button class="delete-form__button-submit">削除</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr class="todo-table__row">
+                <td class="todo-table__item">
+                    <form class="update-form">
+                        <div class="update-form__item">
+                            <input class="update-form__item-input" type="text" name="content" value="test">
+                        </div>
+                        <div class="update-form__button">
+                            <button class="update-form__button-submit" type="submit">更新</button>
+                        </div>
+                    </form>
+                </td>
+                <td class="todo-table__row">
+                    <form class="delete-form">
+                        <div class="delete-form__button">
+                            <button class="delete-form__button-submit">削除</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
 @endsection
-@extends('layouts.app')

@@ -1,83 +1,129 @@
-.header{
-    background: #000;
+.todo__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
 }
 
-.header__inner {
-    padding: 20px 15px;
+.todo__alert--danger {
+    padding: 10px 0;
+    border-color: #f5c2c7;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.todo__alert--danger ul {
+    margin: 0;
+}
+
+.todo__content {
+    margin: 0 auto;
+    padding: 60px 15px;
     max-width: 1230px;
 }
 
-.header__logo{
-    color: #fff;
-    text-decoration: none;
-    font-size:40px;
-    font-weight:bold;
-}
-
-.todo__alert{
-    padding: 15px 20px;
-    background:#D0E7DE;
-}
-
-.todo__alert--success{
-    color: #065134;
-    font-size: 24px;
-}
-
-/* 全体フォームを中央寄せ＋幅制限 */
-.form-container {
-    max-width: 900px;
-    margin: 100px auto;
-    padding: 40px 20px;
-}
-
-/* 入力欄とボタンを横並び・中央揃え・間隔調整 */
-.flex {
+.create-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 200px;
-    /* ← 入力とボタンの間隔を自然に */
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
 }
 
-/* 入力欄のラッパー（余白不要なら特に設定不要） */
-.todo__wrapper {
-    margin: 0;
-    width: auto;
+.create-form__item {
+    width: 70%;
 }
 
-/* 入力欄そのもの */
-.todo__box {
-    padding: 30px;
-    width: 1000px;
-    height: 91.5333px;
-    font-size: 24px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.create-form__item-input {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
 
-/* ボタン側のラッパー（余白調整） */
-.todo__sakusei {
-    margin: 0;
+.create-form__button {
+    width: 20%;
 }
 
-/* 作成ボタンの見た目 */
-.todo__sakuseibox {
-    width: 300px;
-    height: 91.5333px;
-    font-size: 24px;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.create-form__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
     border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-/* ボタンホバー時の演出（任意） */
-.todo__sakuseibox:hover {
-    background-color: #444;
+.todo-table {
+    margin: 30px auto;
+    width: 70%;
+    text-align: left;
+}
+
+.todo-table__inner {
+    width: 100%;
+}
+
+.todo-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-table__header {
+    padding: 12px;
+    width: 20%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.todo-table__item:first-of-type {
+    padding: 12px;
+    width: 90%;
+}
+
+.update-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.update-form__item {
+    width: 80%;
+    line-height: 50%;
+}
+
+.update-form__item-input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.update-form__button {
+    width: 50px;
+}
+
+.update-form__button-submit {
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: #0000ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.delete-form__button {
+    width: 50px;
+}
+
+.delete-form__button-submit {
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: #ff0000;
+    color: #fff;
+    cursor: pointer;
 }
