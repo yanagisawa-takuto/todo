@@ -14,5 +14,3 @@ yarn-error.log
 /.idea
 /.vscode
 docker/mysql/data/
-/docker/mysql/data/**
-/src/docker/mysql/data/**
