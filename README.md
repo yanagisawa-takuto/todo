@@ -5,6 +5,27 @@ todoファイルです
 
 # 環境構築手順
 
+## リポジトリをClone
+
+```bash
+cd coacchtech/laravel
+git clone git@github.com:Estra-Coachtech/laravel-docker-template.git
+mv laravel-docker-template todo
+cd todo
+git remote set-url origin 作成したリポジトリのURL
+git remote -v
+git add .
+git commit -m "リモートリポジトリの変更"
+git push origin main
+```
+
+> エラーが発生する場合
+> ```bash
+> sudo chmod -R 777 ＜権限を変更＞
+> ```
+
+---
+
 ## Dockerを起動
 
 ```bash
